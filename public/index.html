@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linux Terminal Tutorial</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xterm/css/xterm.css" />
+    <style>
+        /* Terminal Styles */
+#terminal {
+    font-family: monospace;             
+    background-color: black;            
+    color: white;                       
+    padding: 10px;                      
+    border-radius: 5px;                 
+    max-width: 100%;                    
+    max-height: 80vh;                   
+    overflow: hidden;                   
+    position: relative;                 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Scrollable content styles */
+#terminal {
+    overflow-y: auto; /* Allow vertical scrolling */
+}
+
+/* Custom Scrollbar Styles for WebKit browsers */
+#terminal::-webkit-scrollbar {
+    width: 12px;  /* Width of the vertical scrollbar */
+}
+
+#terminal::-webkit-scrollbar-track {
+    background: #333;  /* Background of the scrollbar track */
+    border-radius: 10px;  /* Rounded corners for the track */
+}
+
+#terminal::-webkit-scrollbar-thumb {
+    background: #555;  /* Color of the scrollbar thumb */
+    border-radius: 10px;  /* Rounded corners for the thumb */
+}
+
+#terminal::-webkit-scrollbar-thumb:hover {
+    background: #777;  /* Color of the scrollbar thumb on hover */
+}
+
+/* Custom Scrollbar Styles for Firefox */
+#terminal {
+    scrollbar-width: thin;  /* Makes the scrollbar thinner */
+    scrollbar-color: #555 #333;  /* Thumb color and track color */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #terminal {
+        font-size: 14px;                
+        padding: 5px;                   
+    }
+}
+
+@media (max-width: 480px) {
+    #terminal {
+        font-size: 12px;                
+        padding: 3px;                   
+    }
+}
+    </style>
+</head>
+<body>
+    <div id="terminal"></div>
+    <script src="https://cdn.jsdelivr.net/npm/xterm/lib/xterm.js"></script>
+    <script src="/js/app.js"></script>
+</body>
+</html>
